@@ -1,0 +1,9 @@
+Entity[[:space:]]Resolution/affiliationstrings.zip filter=lfs diff=lfs merge=lfs -text
+Entity[[:space:]]Resolution/geographicalSettelments.zip filter=lfs diff=lfs merge=lfs -text
+Entity[[:space:]]Resolution/musicbrainz-20000-A01.csv.zip filter=lfs diff=lfs merge=lfs -text
+Entity[[:space:]]Resolution/ncvoters-10Party-ocp20.tar.gz filter=lfs diff=lfs merge=lfs -text
+Entity[[:space:]]Resolution/ncvoters-5Party-ocp20.tar.gz filter=lfs diff=lfs merge=lfs -text
+Binary[[:space:]]Entity[[:space:]]Resolution/Abt-Buy.zip filter=lfs diff=lfs merge=lfs -text
+Binary[[:space:]]Entity[[:space:]]Resolution/Amazon-GoogleProducts.zip filter=lfs diff=lfs merge=lfs -text
+Binary[[:space:]]Entity[[:space:]]Resolution/DBLP-ACM.zip filter=lfs diff=lfs merge=lfs -text
+Binary[[:space:]]Entity[[:space:]]Resolution/DBLP-Scholar.zip filter=lfs diff=lfs merge=lfs -text
