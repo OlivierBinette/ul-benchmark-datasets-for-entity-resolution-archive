@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class=" js"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="https://dbs.uni-leipzig.de/themes/dbs/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="alternate" hreflang="en" href="https://dbs.uni-leipzig.de/research/projects/benchmark-datasets-for-entity-resolution">
+<link rel="canonical" href="https://dbs.uni-leipzig.de/research/projects/benchmark-datasets-for-entity-resolution">
+<link rel="shortlink" href="https://dbs.uni-leipzig.de/node/11455">
+
+    <title>Benchmark datasets for entity resolution | Database Group Leipzig</title>
+    <link rel="stylesheet" media="all" href="Benchmark%20datasets%20for%20entity%20resolution%20Database%20Group%20Leipzig_files/css_WGxqn6DHwEpNG8D_6Hrz9Vgkc3EMNHdNj_LE2z12ynE.css">
+<link rel="stylesheet" media="all" href="Benchmark%20datasets%20for%20entity%20resolution%20Database%20Group%20Leipzig_files/css_RSL8JsYMGc31rAy7pX6ZDzFJe0YHfBgjDYXWxIQpznc.css">
+
+    
+  <link href="data:text/css,%3Ais(%5Bid*%3D'google_ads_iframe'%5D%2C%5Bid*%3D'taboola-'%5D%2C.taboolaHeight%2C.taboola-placeholder%2C%23credential_picker_container%2C%23credentials-picker-container%2C%23credential_picker_iframe%2C%5Bid*%3D'google-one-tap-iframe'%5D%2C%23google-one-tap-popup-container%2C.google-one-tap-modal-div%2C%23amp_floatingAdDiv%2C%23ez-content-blocker-container)%20%7Bdisplay%3Anone!important%3Bmin-height%3A0!important%3Bheight%3A0!important%3B%7D" rel="stylesheet" type="text/css"></head>
+  <body class="path-node-11455 path-node page-node-type-project large-screen">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+      <!-- Start: Page Wrapper -->
+<div class="page-wrapper w3-col w3-clear w3-animate-opacity w3-text-theme ">
+
+  <!-- Start: Header -->
+  <header id="header" class="w3-col w3-clear w3-theme-l4 none " role="banner" aria-label="Site header">
+    <div id="header-inner" class="w3-container header-inner none">
+                  
+<nav role="navigation" aria-labelledby="block-dbs-account-menu-menu" id="block-dbs-account-menu">
+            
+  <h2 class="visually-hidden" id="block-dbs-account-menu-menu">User account menu</h2>
+  
+
+                          <ul class="ul-parent ul-parent-account ul-0" role="menu" data-once="body">
+                          <li class="li-item li-item-account li-0" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/user/login" class="w3-button li-link li-link-account" role="menuitem" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+<section id="block-dbs-branding" class="w3-block w3-block-wrapper block-system block-system-branding-block">
+  
+    
+    <a href="https://dbs.uni-leipzig.de/" title="Home" rel="home" class="w3-left w3-padding-16 header-logo dbs-logo">
+    <img src="Benchmark%20datasets%20for%20entity%20resolution%20Database%20Group%20Leipzig_files/logo-color.jpg" alt="DBS-Logo">
+  </a>
+<div class="w3-left site-name-slogan">
+      <h1 class="site-name w3-show-block">
+      <a class="w3-xlarge w3-padding w3-show-inline-block" href="https://dbs.uni-leipzig.de/" title="Home" rel="home">Database Group Leipzig</a>
+    </h1>
+        <h3 class="site-slogan w3-large w3-show-block">within the <a href="http://www.informatik.uni-leipzig.de/" target="_blank">department of computer science</a></h3>
+  </div>
+  <a href="https://scads.ai/" title="ScaDS.AI" class="w3-left w3-padding-16 header-logo scads-logo">
+    <img src="Benchmark%20datasets%20for%20entity%20resolution%20Database%20Group%20Leipzig_files/scadsAI.png" alt="ScaDS-Logo">
+  </a>
+  <a href="https://www.uni-leipzig.de/" title="University of Leipzig" class="w3-left w3-padding-16 header-logo uni-logo">
+    <img src="Benchmark%20datasets%20for%20entity%20resolution%20Database%20Group%20Leipzig_files/uni_leipzig_logo_v2b.svg" alt="Logo of the University of Leipzig">
+  </a>
+  </section>
+
+
+          </div>
+  </header>
+  <!-- End: Header -->
+
+    <!-- Start: Main Navigation - Horizontal -->
+  <div id="main-navigation-h" class="w3-col w3-clear main-navigation-wrapper w3-theme w3-sticky" role="navigation" aria-label="Main Navigation">
+    <div id="main-navigation-inner-h" class="w3-row main-navigation-inner-h none">
+      <div class="mobile-nav w3-hide-large w3-button w3-block w3-right-align w3-large w3-theme " data-once="#main-navigation-h">
+        <i class="fa fa-bars"></i>
+      </div>
+      
+<nav role="navigation" aria-labelledby="block-dbs-main-menu-menu" id="block-dbs-main-menu">
+            
+  <h2 class="visually-hidden" id="block-dbs-main-menu-menu">Main navigation</h2>
+  
+
+                          <ul class="ul-parent ul-parent-main ul-0" role="menu" data-once="body">
+                          <li class="li-item li-item-main li-0" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                      <li class="li-item li-item-main li-expanded li-parent li-0" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/study" title="Informations for students" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-system-path="node/9960">Study</a>
+                  <div class="div-expanded">
+                          <a href="javascript:void(0)" class="w3-button toggle-child" aria-haspopup="true">
+                <span class="fa fa-chevron-down"></span>
+              </a>
+                                                        <ul class="ul-child ul-child-main ul-1" role="menu" data-once="body" style="background-color: rgb(38, 42, 49);">
+                          <li class="li-item li-item-main li-expanded li-1" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/study/exams" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-system-path="study/exams">Exams</a>
+                  <div class="div-expanded">
+                          <a href="javascript:void(0)" class="w3-button toggle-child" aria-haspopup="true">
+                <span class="fa fa-chevron-right"></span>
+              </a>
+                                                        <ul class="ul-child ul-child-main ul-2" role="menu" data-once="body" style="background-color: rgb(38, 42, 49);">
+                          <li class="li-item li-item-main li-2" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/study/exams/general-information" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-system-path="node/26">Hinweise zu Klausuren</a>
+              </li>
+        </ul>
+  
+                      </div>
+              </li>
+                      <li class="li-item li-item-main li-expanded li-1" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/study/courses" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-system-path="study/courses">Courses</a>
+                  <div class="div-expanded">
+                          <a href="javascript:void(0)" class="w3-button toggle-child" aria-haspopup="true">
+                <span class="fa fa-chevron-right"></span>
+              </a>
+                                                        <ul class="ul-child ul-child-main ul-2" role="menu" data-once="body" style="background-color: rgb(38, 42, 49);">
+                          <li class="li-item li-item-main li-2" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/study/courses/current" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-system-path="node/11743">Current</a>
+              </li>
+        </ul>
+  
+                      </div>
+              </li>
+                      <li class="li-item li-item-main li-1" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/study/modules" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-system-path="study/modules">Modules</a>
+              </li>
+                      <li class="li-item li-item-main li-1" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/study/lots" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-system-path="node/53">LOTS-Training</a>
+              </li>
+                      <li class="li-item li-item-main li-1" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/study/theses" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-system-path="node/9951">Abschlussarbeiten</a>
+              </li>
+                      <li class="li-item li-item-main li-1" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/study/mds" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-system-path="node/10878">Masterstudiengang Data Science</a>
+              </li>
+                      <li class="li-item li-item-main li-1" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/study/oberseminare" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-system-path="node/11562">Oberseminare</a>
+              </li>
+                      <li class="li-item li-item-main li-1" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/study/problemseminare" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-system-path="node/11563">Problemseminare</a>
+              </li>
+                      <li class="li-item li-item-main li-1" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/study/top" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-system-path="node/10945">Top-Studierende</a>
+              </li>
+        </ul>
+  
+                      </div>
+              </li>
+                      <li class="li-item li-item-main li-expanded li-parent active li-0" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/research" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-system-path="node/20">Research</a>
+                  <div class="div-expanded">
+                          <a href="javascript:void(0)" class="w3-button toggle-child" aria-haspopup="true">
+                <span class="fa fa-chevron-down"></span>
+              </a>
+                                                        <ul class="ul-child ul-child-main ul-1" role="menu" data-once="body" style="background-color: rgb(38, 42, 49);">
+                          <li class="li-item li-item-main li-expanded active li-1" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/research/projects" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-system-path="research/projects">Projects</a>
+                  <div class="div-expanded">
+                          <a href="javascript:void(0)" class="w3-button toggle-child" aria-haspopup="true">
+                <span class="fa fa-chevron-right"></span>
+              </a>
+                                                        <ul class="ul-child ul-child-main ul-2" role="menu" data-once="body" style="background-color: rgb(38, 42, 49);">
+                          <li class="li-item li-item-main active li-2" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/research/projects/benchmark-datasets-for-entity-resolution" class="w3-button li-link li-link-main is-active" role="menuitem" data-drupal-link-system-path="node/11455">Benchmark datasets for entity resolution</a>
+              </li>
+                      <li class="li-item li-item-main li-2" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/research/projects/famer" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-system-path="node/11450">FAMER</a>
+              </li>
+                      <li class="li-item li-item-main li-2" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/research/projects/pprl" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-system-path="node/10949">Privacy-Preserving Record Linkage</a>
+              </li>
+                      <li class="li-item li-item-main li-2" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/research/projects/gradoop" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-system-path="node/18">GRADOOP</a>
+              </li>
+        </ul>
+  
+                      </div>
+              </li>
+                      <li class="li-item li-item-main li-1" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/research/publications" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-system-path="research/publications">Publications</a>
+              </li>
+                      <li class="li-item li-item-main li-1" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/research/labs" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-system-path="node/21">Prototypes</a>
+              </li>
+                      <li class="li-item li-item-main li-1" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/research/annual_reports" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-system-path="research/annual_reports">Annual reports</a>
+              </li>
+                      <li class="li-item li-item-main li-1" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/research/cooperations" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-system-path="node/15">Cooperations</a>
+              </li>
+                      <li class="li-item li-item-main li-1" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/research/graduations" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-system-path="research/graduations">Graduations</a>
+              </li>
+                      <li class="li-item li-item-main li-1" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/research/colloquia" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-system-path="research/colloquia">Colloquia</a>
+              </li>
+                      <li class="li-item li-item-main li-1" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/research/conferences" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-system-path="node/11532">Conferences</a>
+              </li>
+        </ul>
+  
+                      </div>
+              </li>
+                      <li class="li-item li-item-main li-expanded li-parent li-0" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/person" title="Information about current and former team members" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-system-path="person">Team</a>
+                  <div class="div-expanded">
+                          <a href="javascript:void(0)" class="w3-button toggle-child" aria-haspopup="true">
+                <span class="fa fa-chevron-down"></span>
+              </a>
+                                                        <ul class="ul-child ul-child-main ul-1" role="menu" data-once="body" style="background-color: rgb(38, 42, 49);">
+                          <li class="li-item li-item-main li-1" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/person/rahm" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-system-path="node/9966">Erhard Rahm</a>
+              </li>
+                      <li class="li-item li-item-main li-1" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/person?field_person_type_value%5B0%5D=employee" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-query="{&quot;field_person_type_value&quot;:[&quot;employee&quot;]}" data-drupal-link-system-path="person">Member</a>
+              </li>
+                      <li class="li-item li-item-main li-1" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/person?field_person_type_value%5B0%5D=former_employee" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-query="{&quot;field_person_type_value&quot;:[&quot;former_employee&quot;]}" data-drupal-link-system-path="person">Former employees</a>
+              </li>
+                      <li class="li-item li-item-main li-1" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/person?field_person_type_value%5B0%5D=associated_member" class="w3-button li-link li-link-main" role="menuitem" data-drupal-link-query="{&quot;field_person_type_value&quot;:[&quot;associated_member&quot;]}" data-drupal-link-system-path="person">Associated members</a>
+              </li>
+        </ul>
+  
+                      </div>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+
+    </div>
+  </div>
+  <!-- End: Main Navigation - Horizontal -->
+  
+  
+    <!-- Start: Highlighted -->
+  <div id="highlighted" class="w3-col w3-clear w3-theme-l2 ">
+    <div id="highlighted-inner" class="w3-row highlighted-inner none">
+      
+
+
+    </div>
+  </div>
+  <!-- End: Highlighted -->
+  
+  
+      <!-- Start: Page Title -->
+  <div id="page-title" class="w3-col w3-clear w3-theme-d5 none ">
+    <div id="page-title-inner" class="w3-row page-title-inner none">
+      
+
+<section id="block-dbs-page-title" class="w3-block w3-block-wrapper block-core block-page-title-block">
+  
+    
+      
+  <h1 class="page-title">
+<span>Benchmark datasets for entity resolution</span>
+</h1>
+
+
+  </section>
+
+
+    </div>
+  </div>
+  <!-- End: Page Title -- >
+  
+  <!-- Start: Main -->
+  <div id="main-container" class="w3-col w3-clear w3-theme-l5 ">
+    <div id="main-container-inner" class="w3-row main-container-inner none">
+            <!-- Breadcrumb -->
+      <div class="w3-row w3-breadcrumb ">
+        
+
+<section id="block-dbs-breadcrumbs" class="w3-block w3-block-wrapper block-system block-system-breadcrumb-block">
+  
+    
+        <nav class="w3-block w3-section breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+    <ul class="w3-ul w3-small breadcrumb ul-0" data-once="body">
+          <li data-once="ul" class="li-0">
+                  <a href="https://dbs.uni-leipzig.de/">Home</a>
+              </li>
+          <li data-once="ul" class="li-0">
+                  <a href="https://dbs.uni-leipzig.de/research">Research</a>
+              </li>
+          <li data-once="ul" class="li-0">
+                  <a href="https://dbs.uni-leipzig.de/research/projects">Projects</a>
+              </li>
+          <li data-once="ul" class="li-0">
+                  Benchmark datasets for entity resolution
+              </li>
+        </ul>
+  </nav>
+
+  </section>
+
+
+      </div>
+      <!-- End: Breadcrumb -->
+            <!-- Start Main Container  -->
+      <div class="w3-col w3-clear w3-row-padding w3-f-display">
+                        <!-- Start: Main Content -->
+        <div class="w3-threequarter main-box main-region w3css-content breadcrumb-found" role="main" data-once="body">
+          <div class="w3-mobile  ">
+            
+    <div data-drupal-messages-fallback="" class="hidden"></div>
+
+<section id="block-dbs-content" class="w3-block w3-block-wrapper block-system block-system-main-block">
+  
+    
+      
+<article data-history-node-id="11455" role="article" class="w3-row node node--type-project node--view-mode-full">
+  <header class="w3-row node__header">
+    
+        
+
+    
+  </header>
+  <div class="w3-row node__content">
+      <div class="layout layout--onecol">
+    <div class="layout__region layout__region--content">
+      
+<section class="w3-block w3-block-wrapper block-layout-builder block-field-blocknodeprojectfield-project-period">
+  
+    
+      
+  <div class="w3-row field field--name-field-project-period field--type-string field--label-above">
+          <h2 class="field__label">Duration</h2>
+                      <div class="w3-bar-item field__item">2010-2019</div>
+            </div>
+
+  </section>
+
+<section class="w3-block w3-block-wrapper block-layout-builder block-field-blocknodeprojectfield-project-description">
+  
+    
+      
+  <div class="w3-row field field--name-field-project-description field--type-text-with-summary field--label-above">
+          <h2 class="field__label">Description</h2>
+                      <div class="w3-bar-item field__item"><p><strong>Benchmark datasets for entity resolution:</strong></p><p>We
+ offer several datasets for evaluating entity resolution that have been 
+used in our own evaluations and that are made available for other 
+researchers. The initial set of datasets have been used for pairwise 
+matching of entities from two sources. The second set of datasets are 
+also usable for entity clustering, mostly for more than two sources.</p><p><strong>Datasets for Binary Entity Resolution:</strong></p><p>In the VLDB 2010 paper <a href="https://dbs.uni-leipzig.de/research/publications/evaluation-entity-resolution-approaches-real-world-match-problems">[1]</a>
+ we present a first comparative evaluation on the relative match quality
+ and runtime efficiency of entity resolution approaches using 
+challenging real-world match tasks. The evaluation considers existing 
+approaches both with and without using machine learning to find suitable
+ parameterization and combination of similarity functions. In addition 
+to approaches from the research community a state-of-the-art commercial 
+entity resolution implementation is considered. Our results indicate 
+significant quality and efficiency differences between different 
+approaches. We also find that some challenging resolution tasks such as 
+matching product entities from online shops are not sufficiently solved 
+with conventional approaches based on the similarity of attribute 
+values.</p><p>Below you can download the datasets used in our 
+evaluation. The zip-files each contain three csv-files: Two are the 
+entity source files, the third one is the perfect mapping. Please refer 
+to the papers to see how we determined the perfect mapping.</p><table><tbody><tr><td><strong>Task/source files</strong></td><td><strong>Domain</strong></td><td><strong>Attributes</strong></td><td><strong>#entities</strong></td><td><strong>#matches</strong></td><td><strong>Used in</strong></td><td>&nbsp;</td></tr><tr><td><a href="https://dbs.uni-leipzig.de/files/datasets/Abt-Buy.zip">Abt-Buy</a></td><td>E-commerce</td><td>name, description, manufacturer, price</td><td>1081+1092</td><td>1097</td><td><a href="https://dbs.uni-leipzig.de/research/publications/evaluation-entity-resolution-approaches-real-world-match-problems">[1]</a>, <a href="https://dbs.uni-leipzig.de/research/publications/learning-based-approaches-matching-web-data-entities">[2]</a>&nbsp;</td><td>&nbsp;</td></tr><tr><td><a href="https://dbs.uni-leipzig.de/files/datasets/Amazon-GoogleProducts.zip">Amazon-GoogleProducts</a></td><td>E-commerce</td><td>name, description, manufacturer, price</td><td>1363+3226</td><td>1300</td><td><a href="https://dbs.uni-leipzig.de/research/publications/evaluation-entity-resolution-approaches-real-world-match-problems">[1]</a>, <a href="https://dbs.uni-leipzig.de/research/publications/learning-based-approaches-matching-web-data-entities">[2]</a></td><td>&nbsp;</td></tr><tr><td><a href="https://dbs.uni-leipzig.de/files/datasets/DBLP-ACM.zip">DBLP-ACM</a></td><td>Bibliographic</td><td>title, authors, venue, year</td><td>2614+2294</td><td>2224</td><td><a href="https://dbs.uni-leipzig.de/research/publications/moma-mapping-based-object-matching-system">[0]</a>, <a href="https://dbs.uni-leipzig.de/research/publications/evaluation-entity-resolution-approaches-real-world-match-problems">[1]</a>, <a href="https://dbs.uni-leipzig.de/research/publications/learning-based-approaches-matching-web-data-entities">[2]</a></td><td>&nbsp;</td></tr><tr><td><a href="https://dbs.uni-leipzig.de/files/datasets/DBLP-Scholar.zip">DBLP-Scholar</a></td><td>Bibliographic</td><td>title, authors, venue, year</td><td>2616+64263</td><td>5347</td><td><a href="https://dbs.uni-leipzig.de/research/publications/moma-mapping-based-object-matching-system">[0]</a>, <a href="https://dbs.uni-leipzig.de/research/publications/evaluation-entity-resolution-approaches-real-world-match-problems">[1]</a>, <a href="https://dbs.uni-leipzig.de/research/publications/learning-based-approaches-matching-web-data-entities">[2], </a><a href="https://dbs.uni-leipzig.de/research/publications/parallel-entity-resolution-dedoop">[3]</a></td><td>&nbsp;</td></tr></tbody></table><p>January 2019: These datasets are made available by the database group of Prof. Erhard Rahm under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons license</a>. To give proper credit please refer to this website and the VLDB2010 paper <a href="https://dbs.uni-leipzig.de/research/publications/evaluation-entity-resolution-approaches-real-world-match-problems">[1]</a></p><p><strong>Datasets for Entity Clustering:</strong></p><p>Entity
+ clustering is commonly used to determine matching entities within a 
+single data source. It is also needed for matching entities from 
+multiple (&gt;2) sources to group all matching entities from different 
+soutrces within entity clusters. We provide one benchmark dataset for 
+single-source entity clustering and several ones for multi-source entity
+ clustering with more than two duplicate-free sources:</p><ul data-once="body" class="ul-0"><li data-once="ul" class="li-0">The
+ affiliation dataset contain affilations trings extracted from the PDFs 
+of database publications that appeared between 2000 and 2009. The 
+strings often contain multiple address components such as the name of 
+the institution/company and often also the city name.</li><li data-once="ul" class="li-0">Geographic
+ Settlements contains geographical real-world entities from four 
+different data sources (DBpedia, Geonames, Freebase, NYTimes) and has 
+already been used in the OAEI competition.</li><li data-once="ul" class="li-0">The Music Brainz dataset is based on real records about songs from the MusicBrainz database but uses the <a href="https://ieeexplore.ieee.org/abstract/document/7809119">DAPO</a>
+ data generator to create duplicates with modified attribute values. The
+ generated dataset consists of five sources and contains duplicates for 
+50% of the original records in two to five sources. All duplicates are 
+generated with a high degree of corruption to stress-test the ER and 
+clustering approaches.</li><li data-once="ul" class="li-0">The North 
+Carolina Voters dataset is based on real person records from the 
+North-Carolina voter registry and synthetically generated duplicates 
+using the tool <a href="https://dl.acm.org/citation.cfm?id=2507815">GeCo</a>.
+ We consider two configurations with either 5 or 10 sources each having 1
+ million entities; i.e. we process up to 10 million person records. Each
+ source is duplicate free, but 50% of the entities are replicated in all
+ sources without any corruption. Moreover, 25% of entities are corrupted
+ and replicated in all sources, and the remaining 25% are corrupted but 
+present in only some sources. For the generation of corrupted records we
+ applied a moderate corruption rate of 20%, i.e., most attribute values 
+remained unchanged.</li></ul><table><tbody><tr><td><strong>Task/source files</strong></td><td><strong>Domain</strong></td><td><strong>Attributes</strong></td><td><strong>#sources</strong></td><td><strong>#entities</strong></td><td><strong>#matches</strong></td><td><strong>#clusters</strong></td><td><strong>Used in</strong></td><td><strong>More information</strong></td></tr><tr><td><a href="https://dbs.uni-leipzig.de/files/datasets/affiliationstrings.zip">Affiliations</a></td><td>Bibliographic, geography</td><td>affiliation string</td><td>1</td><td>2,260</td><td>32,816</td><td>330</td><td><a href="https://dbs.uni-leipzig.de/research/publications/web-based-affiliation-matching">[9], </a><a href="https://dbs.uni-leipzig.de/research/publications/affiliation-analysis-database-publications">[10]</a></td><td>&nbsp;</td></tr><tr><td><a href="https://dbs.uni-leipzig.de/files/datasets/geographicalSettelments.zip">Geographic Settlements</a></td><td>geography</td><td>name, longitude, latitude</td><td>4</td><td>3,054</td><td>4,391</td><td>820</td><td><a href="https://dbs.uni-leipzig.de/research/publications/comparative-evaluation-distributed-clustering-schemes-multi-source-entity">[4], </a><a href="https://dbs.uni-leipzig.de/research/publications/using-link-features-entity-clustering-knowledge-graphs">[5], </a><a href="https://dbs.uni-leipzig.de/research/publications/scalable-matching-and-clustering-entities-famer">[6], </a><a href="https://dbs.uni-leipzig.de/research/publications/distributed-holistic-clustering-linked-data">[7], </a><a href="https://dbs.uni-leipzig.de/research/publications/incremental-clustering-linked-data">[8]</a></td><td>&nbsp;</td></tr><tr><td><a href="https://dbs.uni-leipzig.de/files/datasets/saeedi/musicbrainz-20-A01.csv.dapo">Music Brainz 20K</a></td><td>&nbsp;</td><td>artist, title, album, year, length</td><td>5</td><td>19,375</td><td>16,250</td><td>10,000</td><td><a href="https://dbs.uni-leipzig.de/research/publications/comparative-evaluation-distributed-clustering-schemes-multi-source-entity">[4], </a><a href="https://dbs.uni-leipzig.de/research/publications/using-link-features-entity-clustering-knowledge-graphs">[5], </a><a href="https://dbs.uni-leipzig.de/research/publications/scalable-matching-and-clustering-entities-famer">[6], </a><a href="https://dbs.uni-leipzig.de/research/publications/distributed-holistic-clustering-linked-data">[7], </a><a href="https://dbs.uni-leipzig.de/research/publications/incremental-clustering-linked-data">[8]</a></td><td><a href="https://dbs.uni-leipzig.de/files/datasets/saeedi/musicBrainz_readme.txt">readMe</a></td></tr><tr><td><a href="https://dbs.uni-leipzig.de/files/datasets/saeedi/musicbrainz-200-A01.csv.dapo">Music Brainz 200K</a></td><td>&nbsp;</td><td>&nbsp;</td><td>5</td><td>193,750</td><td>162,500</td><td>100,000</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><a href="https://dbs.uni-leipzig.de/files/datasets/saeedi/musicbrainz-2000-A01.csv.dapo">Music Brainz 2M</a></td><td>&nbsp;</td><td>&nbsp;</td><td>5</td><td>1,937,500</td><td>1,624,503</td><td>1,000,000</td><td><a href="https://dbs.uni-leipzig.de/research/publications/distributed-holistic-clustering-linked-data">[7], </a><a href="https://dbs.uni-leipzig.de/research/publications/incremental-clustering-linked-data">[8]</a></td><td>&nbsp;</td></tr><tr><td><a href="https://dbs.uni-leipzig.de/files/datasets/saeedi/musicbrainz-20000-A01.csv.zip">Music Brainz 20M</a></td><td>&nbsp;</td><td>&nbsp;</td><td>5</td><td>19,375,000</td><td>16,250,000</td><td>10,000,000</td><td><a href="https://dbs.uni-leipzig.de/publication/title/distributed_holistic_clustering_on_linked_data">[7]</a></td><td>&nbsp;</td></tr><tr><td><a href="https://dbs.uni-leipzig.de/files/datasets/saeedi/5Party-ocp20.tar.gz">North Carolina Voters 5M</a></td><td>Persons</td><td>name, surname, suburb, postcode</td><td>5</td><td>5,000,000</td><td>3,331,384</td><td>3,500,840</td><td><a href="https://dbs.uni-leipzig.de/research/publications/comparative-evaluation-distributed-clustering-schemes-multi-source-entity">[4], </a><a href="https://dbs.uni-leipzig.de/research/publications/using-link-features-entity-clustering-knowledge-graphs">[5], </a><a href="https://dbs.uni-leipzig.de/research/publications/scalable-matching-and-clustering-entities-famer">[6], </a><a href="https://dbs.uni-leipzig.de/research/publications/incremental-clustering-linked-data">[8]</a></td><td><a href="https://dbs.uni-leipzig.de/files/datasets/saeedi/NCVoters_Readme.txt">readMe</a></td></tr><tr><td><a href="https://dbs.uni-leipzig.de/files/datasets/saeedi/10Party-ocp20.tar.gz">North Carolina Voters 10M</a></td><td>&nbsp;</td><td>&nbsp;</td><td>10</td><td>10,000,000</td><td>14,995,973</td><td>6,625,848</td><td><a href="https://dbs.uni-leipzig.de/research/publications/comparative-evaluation-distributed-clustering-schemes-multi-source-entity">[4]</a>, <a href="https://dbs.uni-leipzig.de/research/publications/scalable-matching-and-clustering-entities-famer">[6],</a> <a href="https://dbs.uni-leipzig.de/research/publications/incremental-clustering-linked-data">[8]</a></td><td>&nbsp;</td></tr></tbody></table><p>June 2019: These datasets are made available by the database group of Prof. Erhard Rahm under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons license</a>. To give proper credit please refer to this website and, for the multi-source datasets, to the ADBIS2017 paper <a href="https://dbs.uni-leipzig.de/research/publications/comparative-evaluation-distributed-clustering-schemes-multi-source-entity">[4]</a></p></div>
+            </div>
+
+  </section>
+
+<section class="views-element-container w3-block w3-block-wrapper block-views block-views-blockpublications-by-tags-publications-by-tags">
+  
+    
+      <div class="w3-row element-container-wrapper"><div class="pptest w3-row view view-publications-by-tags view-id-publications_by_tags view-display-id-publications_by_tags js-view-dom-id-e09d2cd082ad2e5b79a4d3588f851a024c1f531b0529eda70b1464c2d7f117f5" data-once="ajax-pager">
+  
+    
+      <header class="view-header">
+      <h2>Publikationen (17)</h2>
+    </header>
+        <button onclick="toggleFilters(event)" class="w3-button w3-block w3-left-align w3-border w3-theme-border">
+      <i class="fa fa-search"></i>
+      <span>Filter anzeigen</span>
+    </button>
+    <div class="w3-border w3-hide">
+      <div class="view-filters form-group">
+        <form class="views-exposed-form w3-row" data-drupal-selector="views-exposed-form-publications-by-tags-publications-by-tags" action="/research/projects/benchmark-datasets-for-entity-resolution" method="get" id="views-exposed-form-publications-by-tags-publications-by-tags" accept-charset="UTF-8" data-once="exposed-form">
+  <div class="w3-block form--inline clearfix">
+  <div class="w3-section js-form-item form-item js-form-type-select form-type-select js-form-item-items-per-page form-item-items-per-page">
+      <label for="edit-items-per-page--bLkOr9jBAJw">Items per page</label>
+        <select data-drupal-selector="edit-items-per-page" id="edit-items-per-page--bLkOr9jBAJw" name="items_per_page" class="form-select w3-select w3-border w3-theme-border"><option value="10" selected="selected">10</option><option value="20">20</option><option value="50">50</option><option value="All">- All -</option></select>
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions w3-row element-container-wrapper js-form-wrapper form-wrapper" id="edit-actions--b1Vs5giEAfI"><input data-drupal-selector="edit-submit-publications-by-tags-ccgz-4gcgfi" type="submit" id="edit-submit-publications-by-tags--CcgZ-4gCgFI" value="Apply" class="button js-form-submit form-submit w3-button w3-border w3-theme-border w3-margin-top w3-margin-bottom">
+</div>
+
+</div>
+
+</form>
+
+      </div>
+    </div>
+    <script>
+      function toggleFilters(event) {
+        let sibling = event.currentTarget.nextElementSibling
+        if (sibling.className.indexOf("w3-show") === -1) {
+          sibling.className += " w3-show";
+        } else {
+          sibling.className = sibling.className.replace(" w3-show", "");
+        }
+      }
+    </script>
+    
+      <div class="view-content">
+      <div class="w3-responsive">
+  <table class="w3-table-all cols-11">
+        <thead>
+      <tr>
+                                                                                <th class="w3-center" id="view-field-publication-file-pdf-table-column--CSUer_O1w1g" scope="col" style="width: 15%">Dateien</th>
+                                                                        
+                                                                        
+        <th id="view-field-publication-cover-image-table-column--e6xlumB6DLU" class="views-field views-field-field-publication-cover-image" scope="col" style="width: 10%">Cover</th>
+                                                                                                                    <th id="view-title-table-column---Z0lNLG-G1c" class="views-field views-field-title" scope="col" style="">Beschreibung</th>
+                                                                                                                    <th id="view-field-publication-year-table-column--oJJ53zx5wzs" class="views-field views-field-field-publication-year" scope="col" style="width: 85px"><a href="https://dbs.uni-leipzig.de/research/projects/benchmark-datasets-for-entity-resolution?page=0&amp;items_per_page=10&amp;order=field_publication_year&amp;sort=desc" title="sort by Jahr">Jahr</a></th>
+                                                                                                                  </tr>
+    </thead>
+    <tbody>
+          <tr>
+                  <!-- field_publication_file_pdf -->
+                                          <!-- Dateien/Links -->
+            <td class="w3-center" headers="view-field-publication-file-pdf-table-column--CSUer_O1w1g">  <a href="https://dbs.uni-leipzig.de/files/research/publications/2021-10/pdf/MSCD_HAC_KEOD.pdf" class="w3-button w3-border w3-theme-border" title="Download PDF" target="_blank">
+    <i class="fa fa-file-pdf-o" style="width: 16px"></i>
+  </a>
+  <a href="https://scholar.google.com/scholar?q=intitle%3A%22Matching%20Entities%20from%20Multiple%20Sources%20with%20Hierarchical%20Agglomerative%20Clustering%22" class="w3-button w3-border w3-theme-border" title="Google Scholar Search Link" target="_blank">
+    <i class="ai ai-google-scholar" style="width: 16px"></i>
+  </a>
+</td>
+                            <!-- field_publication_file_bibtex -->
+                                                                                                            <!-- field_publication_url -->
+                                                                                                            <!-- field_publication_cover_image -->
+                                                                                                      <!-- Cover -->
+            <td headers="view-field-publication-cover-image-table-column--e6xlumB6DLU" class="views-field views-field-field-publication-cover-image">  <img loading="lazy" src="Benchmark%20datasets%20for%20entity%20resolution%20Database%20Group%20Leipzig_files/paper.png" width="57" height="75" alt="" class="image-style-thumbnail">
+
+
+</td>
+                            <!-- title -->
+                                                                                                      <!-- Text -->
+            <td headers="view-title-table-column---Z0lNLG-G1c" class="views-field views-field-title">
+              <div class="readon"><a href="https://dbs.uni-leipzig.de/research/publications/matching-entities-from-multiple-sources-with-hierarchical-agglomerative" hreflang="de">Matching Entities from Multiple Sources with Hierarchical Agglomerative Clustering</a></div>
+              <div class="textlink">
+                <small><a href="https://dbs.uni-leipzig.de/person/alieh_saeedi">Saeedi, A.</a>
+; <a href="https://dbs.uni-leipzig.de/person/l_david">David, L.</a>
+; <a href="https://dbs.uni-leipzig.de/person/rahm">Rahm, E.</a>
+</small>
+              <div>
+              <span>KEOD 2021</span>
+                          </div></div></td>
+                            <!-- field_publication_year -->
+                                                                                                      <!-- Jahr -->
+            <td headers="view-field-publication-year-table-column--oJJ53zx5wzs" class="views-field views-field-field-publication-year">
+              2021
+              / 10
+            </td>
+                            <!-- field_publication_month -->
+                                                                                                            <!-- field_publication_authors -->
+                                                                                                            <!-- field_publication_venue -->
+                                                                                                            <!-- field_publication_authors_scholar -->
+                                                                                                            <!-- google_scholar_link -->
+                                            </tr>
+          <tr>
+                  <!-- field_publication_file_pdf -->
+                                          <!-- Dateien/Links -->
+            <td class="w3-center" headers="view-field-publication-file-pdf-table-column--CSUer_O1w1g">  <a href="https://dbs.uni-leipzig.de/files/research/publications/2021-3/pdf/Paper_MSCD_AP_BTW21_Dresden.pdf" class="w3-button w3-border w3-theme-border" title="Download PDF" target="_blank">
+    <i class="fa fa-file-pdf-o" style="width: 16px"></i>
+  </a>
+  <a href="https://scholar.google.com/scholar?q=intitle%3A%22Extended%20Affinity%20Propagation%20Clustering%20for%20Multi-source%20Entity%20Resolution%22" class="w3-button w3-border w3-theme-border" title="Google Scholar Search Link" target="_blank">
+    <i class="ai ai-google-scholar" style="width: 16px"></i>
+  </a>
+</td>
+                            <!-- field_publication_file_bibtex -->
+                                                                                                            <!-- field_publication_url -->
+                                                                                                            <!-- field_publication_cover_image -->
+                                                                                                      <!-- Cover -->
+            <td headers="view-field-publication-cover-image-table-column--e6xlumB6DLU" class="views-field views-field-field-publication-cover-image">  <img loading="lazy" src="Benchmark%20datasets%20for%20entity%20resolution%20Database%20Group%20Leipzig_files/btw_2021.png" class="image-style-thumbnail">
+
+
+</td>
+                            <!-- title -->
+                                                                                                      <!-- Text -->
+            <td headers="view-title-table-column---Z0lNLG-G1c" class="views-field views-field-title">
+              <div class="readon"><a href="https://dbs.uni-leipzig.de/research/publications/extended-affinity-propagation-clustering-for-multi-source-entity-resolution" hreflang="de">Extended Affinity Propagation Clustering for Multi-source Entity Resolution</a></div>
+              <div class="textlink">
+                <small><a href="https://dbs.uni-leipzig.de/person/stefan_lerm">Lerm, S.</a>
+; <a href="https://dbs.uni-leipzig.de/person/alieh_saeedi">Saeedi, A.</a>
+; <a href="https://dbs.uni-leipzig.de/person/rahm">Rahm, E.</a>
+</small>
+              <div>
+              <span>BTW 2021</span>
+                          </div></div></td>
+                            <!-- field_publication_year -->
+                                                                                                      <!-- Jahr -->
+            <td headers="view-field-publication-year-table-column--oJJ53zx5wzs" class="views-field views-field-field-publication-year">
+              2021
+              / 3
+            </td>
+                            <!-- field_publication_month -->
+                                                                                                            <!-- field_publication_authors -->
+                                                                                                            <!-- field_publication_venue -->
+                                                                                                            <!-- field_publication_authors_scholar -->
+                                                                                                            <!-- google_scholar_link -->
+                                            </tr>
+          <tr>
+                  <!-- field_publication_file_pdf -->
+                                          <!-- Dateien/Links -->
+            <td class="w3-center" headers="view-field-publication-file-pdf-table-column--CSUer_O1w1g">  <a href="https://dbs.uni-leipzig.de/files/research/publications/2020-6/pdf/FAMER_Incremental_eswc2020.pdf" class="w3-button w3-border w3-theme-border" title="Download PDF" target="_blank">
+    <i class="fa fa-file-pdf-o" style="width: 16px"></i>
+  </a>
+  <a href="https://scholar.google.com/scholar?q=intitle%3A%22Incremental%20Multi-source%20Entity%20Resolution%20for%20Knowledge%20Graph%20Completion%22" class="w3-button w3-border w3-theme-border" title="Google Scholar Search Link" target="_blank">
+    <i class="ai ai-google-scholar" style="width: 16px"></i>
+  </a>
+</td>
+                            <!-- field_publication_file_bibtex -->
+                                                                                                            <!-- field_publication_url -->
+                                                                                                            <!-- field_publication_cover_image -->
+                                                                                                      <!-- Cover -->
+            <td headers="view-field-publication-cover-image-table-column--e6xlumB6DLU" class="views-field views-field-field-publication-cover-image">  <img loading="lazy" src="Benchmark%20datasets%20for%20entity%20resolution%20Database%20Group%20Leipzig_files/eswc20.jpg" class="image-style-thumbnail">
+
+
+</td>
+                            <!-- title -->
+                                                                                                      <!-- Text -->
+            <td headers="view-title-table-column---Z0lNLG-G1c" class="views-field views-field-title">
+              <div class="readon"><a href="https://dbs.uni-leipzig.de/research/publications/incremental-multi-source-entity-resolution-for-knowledge-graph-completion" hreflang="de">Incremental Multi-source Entity Resolution for Knowledge Graph Completion</a></div>
+              <div class="textlink">
+                <small><a href="https://dbs.uni-leipzig.de/person/alieh_saeedi">Saeedi, A.</a>
+; <a href="https://dbs.uni-leipzig.de/person/eric_peukert">Peukert, E.</a>
+; <a href="https://dbs.uni-leipzig.de/person/rahm">Rahm, E.</a>
+</small>
+              <div>
+              <span>Proc. ESWC </span>
+                          </div></div></td>
+                            <!-- field_publication_year -->
+                                                                                                      <!-- Jahr -->
+            <td headers="view-field-publication-year-table-column--oJJ53zx5wzs" class="views-field views-field-field-publication-year">
+              2020
+              / 6
+            </td>
+                            <!-- field_publication_month -->
+                                                                                                            <!-- field_publication_authors -->
+                                                                                                            <!-- field_publication_venue -->
+                                                                                                            <!-- field_publication_authors_scholar -->
+                                                                                                            <!-- google_scholar_link -->
+                                            </tr>
+          <tr>
+                  <!-- field_publication_file_pdf -->
+                                          <!-- Dateien/Links -->
+            <td class="w3-center" headers="view-field-publication-file-pdf-table-column--CSUer_O1w1g">  <a href="https://dbs.uni-leipzig.de/files/research/publications/2019-8/pdf/DI2KG_paper_10.pdf" class="w3-button w3-border w3-theme-border" title="Download PDF" target="_blank">
+    <i class="fa fa-file-pdf-o" style="width: 16px"></i>
+  </a>
+  <a href="https://scholar.google.com/scholar?q=intitle%3A%22Knowledge%20Graph%20Completion%20with%20FAMER%22" class="w3-button w3-border w3-theme-border" title="Google Scholar Search Link" target="_blank">
+    <i class="ai ai-google-scholar" style="width: 16px"></i>
+  </a>
+  <a href="http://ceur-ws.org/Vol-2512/" class="w3-button w3-border w3-theme-border" title="Visit URL" target="_blank">
+    <i class="fa fa-external-link" style="width: 16px"></i>
+  </a>
+</td>
+                            <!-- field_publication_file_bibtex -->
+                                                                                                            <!-- field_publication_url -->
+                                                                                                            <!-- field_publication_cover_image -->
+                                                                                                      <!-- Cover -->
+            <td headers="view-field-publication-cover-image-table-column--e6xlumB6DLU" class="views-field views-field-field-publication-cover-image">  <img loading="lazy" src="Benchmark%20datasets%20for%20entity%20resolution%20Database%20Group%20Leipzig_files/paper.png" width="57" height="75" alt="" class="image-style-thumbnail">
+
+
+</td>
+                            <!-- title -->
+                                                                                                      <!-- Text -->
+            <td headers="view-title-table-column---Z0lNLG-G1c" class="views-field views-field-title">
+              <div class="readon"><a href="https://dbs.uni-leipzig.de/research/publications/knowledge-graph-completion-with-famer" hreflang="de">Knowledge Graph Completion with FAMER</a></div>
+              <div class="textlink">
+                <small><a href="https://dbs.uni-leipzig.de/person/daniel_obraczka">Obraczka, D.</a>
+; <a href="https://dbs.uni-leipzig.de/person/alieh_saeedi">Saeedi, A.</a>
+; <a href="https://dbs.uni-leipzig.de/person/rahm">Rahm, E.</a>
+</small>
+              <div>
+              <span>Proc. KDD workshop on Data Integration  to Knowledge Graphs (DI2KG) (DI2KG Challenge Winner)</span>
+                          </div></div></td>
+                            <!-- field_publication_year -->
+                                                                                                      <!-- Jahr -->
+            <td headers="view-field-publication-year-table-column--oJJ53zx5wzs" class="views-field views-field-field-publication-year">
+              2019
+              / 8
+            </td>
+                            <!-- field_publication_month -->
+                                                                                                            <!-- field_publication_authors -->
+                                                                                                            <!-- field_publication_venue -->
+                                                                                                            <!-- field_publication_authors_scholar -->
+                                                                                                            <!-- google_scholar_link -->
+                                            </tr>
+          <tr>
+                  <!-- field_publication_file_pdf -->
+                                          <!-- Dateien/Links -->
+            <td class="w3-center" headers="view-field-publication-file-pdf-table-column--CSUer_O1w1g">  <a href="https://dbs.uni-leipzig.de/files/research/publications/2018-11/pdf/incremtal-dmc2018-final.pdf" class="w3-button w3-border w3-theme-border" title="Download PDF" target="_blank">
+    <i class="fa fa-file-pdf-o" style="width: 16px"></i>
+  </a>
+  <a href="https://scholar.google.com/scholar?q=intitle%3A%22Incremental%20Clustering%20on%20Linked%20Data%22" class="w3-button w3-border w3-theme-border" title="Google Scholar Search Link" target="_blank">
+    <i class="ai ai-google-scholar" style="width: 16px"></i>
+  </a>
+</td>
+                            <!-- field_publication_file_bibtex -->
+                                                                                                            <!-- field_publication_url -->
+                                                                                                            <!-- field_publication_cover_image -->
+                                                                                                      <!-- Cover -->
+            <td headers="view-field-publication-cover-image-table-column--e6xlumB6DLU" class="views-field views-field-field-publication-cover-image">  <img loading="lazy" src="Benchmark%20datasets%20for%20entity%20resolution%20Database%20Group%20Leipzig_files/paper.png" width="57" height="75" alt="" class="image-style-thumbnail">
+
+
+</td>
+                            <!-- title -->
+                                                                                                      <!-- Text -->
+            <td headers="view-title-table-column---Z0lNLG-G1c" class="views-field views-field-title">
+              <div class="readon"><a href="https://dbs.uni-leipzig.de/research/publications/incremental-clustering-on-linked-data" hreflang="de">Incremental Clustering on Linked Data</a></div>
+              <div class="textlink">
+                <small><a href="https://dbs.uni-leipzig.de/person/markus_nentwig">Nentwig, M.</a>
+; <a href="https://dbs.uni-leipzig.de/person/rahm">Rahm, E.</a>
+</small>
+              <div>
+              <span>Proc. IEEE International Conference on Data Mining Workshop, ICDMW 2018, Singapore</span>
+                          </div></div></td>
+                            <!-- field_publication_year -->
+                                                                                                      <!-- Jahr -->
+            <td headers="view-field-publication-year-table-column--oJJ53zx5wzs" class="views-field views-field-field-publication-year">
+              2018
+              / 11
+            </td>
+                            <!-- field_publication_month -->
+                                                                                                            <!-- field_publication_authors -->
+                                                                                                            <!-- field_publication_venue -->
+                                                                                                            <!-- field_publication_authors_scholar -->
+                                                                                                            <!-- google_scholar_link -->
+                                            </tr>
+          <tr>
+                  <!-- field_publication_file_pdf -->
+                                          <!-- Dateien/Links -->
+            <td class="w3-center" headers="view-field-publication-file-pdf-table-column--CSUer_O1w1g">  <a href="https://dbs.uni-leipzig.de/files/research/publications/2018-11/pdf/FAMER-2407-8454-1-SM.pdf" class="w3-button w3-border w3-theme-border" title="Download PDF" target="_blank">
+    <i class="fa fa-file-pdf-o" style="width: 16px"></i>
+  </a>
+  <a href="https://scholar.google.com/scholar?q=intitle%3A%22Scalable%20Matching%20and%20Clustering%20of%20Entities%20with%20FAMER%22" class="w3-button w3-border w3-theme-border" title="Google Scholar Search Link" target="_blank">
+    <i class="ai ai-google-scholar" style="width: 16px"></i>
+  </a>
+  <a href="https://doi.org/10.7250/csimq.2018-16.04" class="w3-button w3-border w3-theme-border" title="Visit URL" target="_blank">
+    <i class="fa fa-external-link" style="width: 16px"></i>
+  </a>
+</td>
+                            <!-- field_publication_file_bibtex -->
+                                                                                                            <!-- field_publication_url -->
+                                                                                                            <!-- field_publication_cover_image -->
+                                                                                                      <!-- Cover -->
+            <td headers="view-field-publication-cover-image-table-column--e6xlumB6DLU" class="views-field views-field-field-publication-cover-image">  <img loading="lazy" src="Benchmark%20datasets%20for%20entity%20resolution%20Database%20Group%20Leipzig_files/paper.png" width="57" height="75" alt="" class="image-style-thumbnail">
+
+
+</td>
+                            <!-- title -->
+                                                                                                      <!-- Text -->
+            <td headers="view-title-table-column---Z0lNLG-G1c" class="views-field views-field-title">
+              <div class="readon"><a href="https://dbs.uni-leipzig.de/research/publications/scalable-matching-and-clustering-of-entities-with-famer" hreflang="de">Scalable Matching and Clustering of Entities with FAMER</a></div>
+              <div class="textlink">
+                <small><a href="https://dbs.uni-leipzig.de/person/alieh_saeedi">Saeedi, A.</a>
+; <a href="https://dbs.uni-leipzig.de/person/markus_nentwig">Nentwig, M.</a>
+; <a href="https://dbs.uni-leipzig.de/person/eric_peukert">Peukert, E.</a>
+; <a href="https://dbs.uni-leipzig.de/person/rahm">Rahm, E.</a>
+</small>
+              <div>
+              <span>Complex Systems Informatics and Modeling Quarterly (CSIMQ), Issue 16, Sep./Oct. 2018, pp 61–83</span>
+                          </div></div></td>
+                            <!-- field_publication_year -->
+                                                                                                      <!-- Jahr -->
+            <td headers="view-field-publication-year-table-column--oJJ53zx5wzs" class="views-field views-field-field-publication-year">
+              2018
+              / 11
+            </td>
+                            <!-- field_publication_month -->
+                                                                                                            <!-- field_publication_authors -->
+                                                                                                            <!-- field_publication_venue -->
+                                                                                                            <!-- field_publication_authors_scholar -->
+                                                                                                            <!-- google_scholar_link -->
+                                            </tr>
+          <tr>
+                  <!-- field_publication_file_pdf -->
+                                          <!-- Dateien/Links -->
+            <td class="w3-center" headers="view-field-publication-file-pdf-table-column--CSUer_O1w1g">  <a href="https://dbs.uni-leipzig.de/files/research/publications/2018-6/pdf/eswc.pdf" class="w3-button w3-border w3-theme-border" title="Download PDF" target="_blank">
+    <i class="fa fa-file-pdf-o" style="width: 16px"></i>
+  </a>
+  <a href="https://scholar.google.com/scholar?q=intitle%3A%22Using%20Link%20Features%20for%20Entity%20Clustering%20in%20Knowledge%20Graphs%22" class="w3-button w3-border w3-theme-border" title="Google Scholar Search Link" target="_blank">
+    <i class="ai ai-google-scholar" style="width: 16px"></i>
+  </a>
+</td>
+                            <!-- field_publication_file_bibtex -->
+                                                                                                            <!-- field_publication_url -->
+                                                                                                            <!-- field_publication_cover_image -->
+                                                                                                      <!-- Cover -->
+            <td headers="view-field-publication-cover-image-table-column--e6xlumB6DLU" class="views-field views-field-field-publication-cover-image">  <img loading="lazy" src="Benchmark%20datasets%20for%20entity%20resolution%20Database%20Group%20Leipzig_files/eswc18_0.jpg" class="image-style-thumbnail">
+
+
+</td>
+                            <!-- title -->
+                                                                                                      <!-- Text -->
+            <td headers="view-title-table-column---Z0lNLG-G1c" class="views-field views-field-title">
+              <div class="readon"><a href="https://dbs.uni-leipzig.de/research/publications/using-link-features-for-entity-clustering-in-knowledge-graphs" hreflang="de">Using Link Features for Entity Clustering in Knowledge Graphs</a></div>
+              <div class="textlink">
+                <small><a href="https://dbs.uni-leipzig.de/person/alieh_saeedi">Saeedi, A.</a>
+; <a href="https://dbs.uni-leipzig.de/person/eric_peukert">Peukert, E.</a>
+; <a href="https://dbs.uni-leipzig.de/person/rahm">Rahm, E.</a>
+</small>
+              <div>
+              <span>Proc. ESWC 2018 (Best research paper award)</span>
+                          </div></div></td>
+                            <!-- field_publication_year -->
+                                                                                                      <!-- Jahr -->
+            <td headers="view-field-publication-year-table-column--oJJ53zx5wzs" class="views-field views-field-field-publication-year">
+              2018
+              / 6
+            </td>
+                            <!-- field_publication_month -->
+                                                                                                            <!-- field_publication_authors -->
+                                                                                                            <!-- field_publication_venue -->
+                                                                                                            <!-- field_publication_authors_scholar -->
+                                                                                                            <!-- google_scholar_link -->
+                                            </tr>
+          <tr>
+                  <!-- field_publication_file_pdf -->
+                                          <!-- Dateien/Links -->
+            <td class="w3-center" headers="view-field-publication-file-pdf-table-column--CSUer_O1w1g">  <a href="https://dbs.uni-leipzig.de/files/research/publications/2018-3/pdf/edbt-demopaper.pdf" class="w3-button w3-border w3-theme-border" title="Download PDF" target="_blank">
+    <i class="fa fa-file-pdf-o" style="width: 16px"></i>
+  </a>
+  <a href="https://scholar.google.com/scholar?q=intitle%3A%22Interactive%20Visualization%20of%20Large%20Similarity%20Graphs%20and%20Entity%20Resolution%20Clusters%22" class="w3-button w3-border w3-theme-border" title="Google Scholar Search Link" target="_blank">
+    <i class="ai ai-google-scholar" style="width: 16px"></i>
+  </a>
+</td>
+                            <!-- field_publication_file_bibtex -->
+                                                                                                            <!-- field_publication_url -->
+                                                                                                            <!-- field_publication_cover_image -->
+                                                                                                      <!-- Cover -->
+            <td headers="view-field-publication-cover-image-table-column--e6xlumB6DLU" class="views-field views-field-field-publication-cover-image">  <img loading="lazy" src="Benchmark%20datasets%20for%20entity%20resolution%20Database%20Group%20Leipzig_files/edbt-icdt-logo.png" class="image-style-thumbnail">
+
+
+</td>
+                            <!-- title -->
+                                                                                                      <!-- Text -->
+            <td headers="view-title-table-column---Z0lNLG-G1c" class="views-field views-field-title">
+              <div class="readon"><a href="https://dbs.uni-leipzig.de/research/publications/interactive-visualization-of-large-similarity-graphs-and-entity-resolution" hreflang="de">Interactive Visualization of Large Similarity Graphs and Entity Resolution Clusters</a></div>
+              <div class="textlink">
+                <small><a href="https://dbs.uni-leipzig.de/person/m-ali_rostami">Rostami, M.</a>
+; <a href="https://dbs.uni-leipzig.de/person/alieh_saeedi">Saeedi, A.</a>
+; <a href="https://dbs.uni-leipzig.de/person/eric_peukert">Peukert, E.</a>
+; <a href="https://dbs.uni-leipzig.de/person/rahm">Rahm, E.</a>
+</small>
+              <div>
+              <span>Proc. EDBT 2018 </span>
+                          </div></div></td>
+                            <!-- field_publication_year -->
+                                                                                                      <!-- Jahr -->
+            <td headers="view-field-publication-year-table-column--oJJ53zx5wzs" class="views-field views-field-field-publication-year">
+              2018
+              / 3
+            </td>
+                            <!-- field_publication_month -->
+                                                                                                            <!-- field_publication_authors -->
+                                                                                                            <!-- field_publication_venue -->
+                                                                                                            <!-- field_publication_authors_scholar -->
+                                                                                                            <!-- google_scholar_link -->
+                                            </tr>
+          <tr>
+                  <!-- field_publication_file_pdf -->
+                                          <!-- Dateien/Links -->
+            <td class="w3-center" headers="view-field-publication-file-pdf-table-column--CSUer_O1w1g">  <a href="https://dbs.uni-leipzig.de/files/research/publications/2017-10/pdf/Nentwig-DistributedHolisticClusteringOnLinkedData.pdf" class="w3-button w3-border w3-theme-border" title="Download PDF" target="_blank">
+    <i class="fa fa-file-pdf-o" style="width: 16px"></i>
+  </a>
+  <a href="https://scholar.google.com/scholar?q=intitle%3A%22Distributed%20Holistic%20Clustering%20on%20Linked%20Data%22" class="w3-button w3-border w3-theme-border" title="Google Scholar Search Link" target="_blank">
+    <i class="ai ai-google-scholar" style="width: 16px"></i>
+  </a>
+  <a href="https://doi.org/10.1007/978-3-319-69459-7_25" class="w3-button w3-border w3-theme-border" title="Visit URL" target="_blank">
+    <i class="fa fa-external-link" style="width: 16px"></i>
+  </a>
+</td>
+                            <!-- field_publication_file_bibtex -->
+                                                                                                            <!-- field_publication_url -->
+                                                                                                            <!-- field_publication_cover_image -->
+                                                                                                      <!-- Cover -->
+            <td headers="view-field-publication-cover-image-table-column--e6xlumB6DLU" class="views-field views-field-field-publication-cover-image">  <img loading="lazy" src="Benchmark%20datasets%20for%20entity%20resolution%20Database%20Group%20Leipzig_files/lncs-medium_002.jpg" class="image-style-thumbnail">
+
+
+</td>
+                            <!-- title -->
+                                                                                                      <!-- Text -->
+            <td headers="view-title-table-column---Z0lNLG-G1c" class="views-field views-field-title">
+              <div class="readon"><a href="https://dbs.uni-leipzig.de/research/publications/distributed-holistic-clustering-on-linked-data" hreflang="de">Distributed Holistic Clustering on Linked Data</a></div>
+              <div class="textlink">
+                <small><a href="https://dbs.uni-leipzig.de/person/markus_nentwig">Nentwig, M.</a>
+; <a href="https://dbs.uni-leipzig.de/person/anika_gross">Groß, A.</a>
+; <a href="https://dbs.uni-leipzig.de/person/m_moeller">Möller, M.</a>
+; <a href="https://dbs.uni-leipzig.de/person/rahm">Rahm, E.</a>
+</small>
+              <div>
+              <span>Proc. OTM 2017  - Confederated International Conferences: CoopIS, C&amp;TC, and ODBASE 2017, LNCS 10574, pp 371-382</span>
+                          </div></div></td>
+                            <!-- field_publication_year -->
+                                                                                                      <!-- Jahr -->
+            <td headers="view-field-publication-year-table-column--oJJ53zx5wzs" class="views-field views-field-field-publication-year">
+              2017
+              / 10
+            </td>
+                            <!-- field_publication_month -->
+                                                                                                            <!-- field_publication_authors -->
+                                                                                                            <!-- field_publication_venue -->
+                                                                                                            <!-- field_publication_authors_scholar -->
+                                                                                                            <!-- google_scholar_link -->
+                                            </tr>
+          <tr>
+                  <!-- field_publication_file_pdf -->
+                                          <!-- Dateien/Links -->
+            <td class="w3-center" headers="view-field-publication-file-pdf-table-column--CSUer_O1w1g">  <a href="https://dbs.uni-leipzig.de/files/research/publications/2017-9/pdf/famer-adbis2017.pdf" class="w3-button w3-border w3-theme-border" title="Download PDF" target="_blank">
+    <i class="fa fa-file-pdf-o" style="width: 16px"></i>
+  </a>
+  <a href="https://scholar.google.com/scholar?q=intitle%3A%22Comparative%20Evaluation%20of%20Distributed%20Clustering%20Schemes%20for%20Multi-source%20Entity%20Resolution%22" class="w3-button w3-border w3-theme-border" title="Google Scholar Search Link" target="_blank">
+    <i class="ai ai-google-scholar" style="width: 16px"></i>
+  </a>
+</td>
+                            <!-- field_publication_file_bibtex -->
+                                                                                                            <!-- field_publication_url -->
+                                                                                                            <!-- field_publication_cover_image -->
+                                                                                                      <!-- Cover -->
+            <td headers="view-field-publication-cover-image-table-column--e6xlumB6DLU" class="views-field views-field-field-publication-cover-image">  <img loading="lazy" src="Benchmark%20datasets%20for%20entity%20resolution%20Database%20Group%20Leipzig_files/lncs-medium.jpg" class="image-style-thumbnail">
+
+
+</td>
+                            <!-- title -->
+                                                                                                      <!-- Text -->
+            <td headers="view-title-table-column---Z0lNLG-G1c" class="views-field views-field-title">
+              <div class="readon"><a href="https://dbs.uni-leipzig.de/research/publications/comparative-evaluation-of-distributed-clustering-schemes-for-multi-source" hreflang="de">Comparative Evaluation of Distributed Clustering Schemes for Multi-source Entity Resolution</a></div>
+              <div class="textlink">
+                <small><a href="https://dbs.uni-leipzig.de/person/alieh_saeedi">Saeedi, A.</a>
+; <a href="https://dbs.uni-leipzig.de/person/eric_peukert">Peukert, E.</a>
+; <a href="https://dbs.uni-leipzig.de/person/rahm">Rahm, E.</a>
+</small>
+              <div>
+              <span>Proc. ADBIS, LNCS 10509, pp 278-293</span>
+                          </div></div></td>
+                            <!-- field_publication_year -->
+                                                                                                      <!-- Jahr -->
+            <td headers="view-field-publication-year-table-column--oJJ53zx5wzs" class="views-field views-field-field-publication-year">
+              2017
+              / 9
+            </td>
+                            <!-- field_publication_month -->
+                                                                                                            <!-- field_publication_authors -->
+                                                                                                            <!-- field_publication_venue -->
+                                                                                                            <!-- field_publication_authors_scholar -->
+                                                                                                            <!-- google_scholar_link -->
+                                            </tr>
+      </tbody>
+  </table>
+</div>
+
+
+    </div>
+  
+        <nav class="w3-center pager" role="navigation" aria-labelledby="pagination-heading--bWyau8XKrng">
+    <h4 id="pagination-heading--bWyau8XKrng" class="visually-hidden">Pagination</h4>
+    <ul class="w3-bar pager__items js-pager__items ul-0" data-once="body">
+                                                        <li class="w3-button pager__item w3-light-gray w3-active-pager is-active li-0" data-once="ul">
+                                          <a href="https://dbs.uni-leipzig.de/research/projects/benchmark-datasets-for-entity-resolution?page=0" title="Current page">
+            <span class="visually-hidden">
+              Current page
+            </span>1</a>
+        </li>
+              <li class="w3-button pager__item li-0" data-once="ul">
+                                          <a href="https://dbs.uni-leipzig.de/research/projects/benchmark-datasets-for-entity-resolution?page=1" title="Go to page 2">
+            <span class="visually-hidden">
+              Page
+            </span>2</a>
+        </li>
+                                      <li class="w3-button pager__item pager__item--next li-0" data-once="ul">
+          <a href="https://dbs.uni-leipzig.de/research/projects/benchmark-datasets-for-entity-resolution?page=1" title="Go to next page" rel="next">
+            <span class="visually-hidden">Next page</span>
+            <span aria-hidden="true">Next ›</span>
+          </a>
+        </li>
+                          <li class="w3-button pager__item pager__item--last li-0" data-once="ul">
+          <a href="https://dbs.uni-leipzig.de/research/projects/benchmark-datasets-for-entity-resolution?page=1" title="Go to last page">
+            <span class="visually-hidden">Last page</span>
+            <span aria-hidden="true">Last »</span>
+          </a>
+        </li>
+          </ul>
+  </nav>
+
+          </div>
+
+
+</div>
+
+  </section>
+
+<section class="w3-block w3-block-wrapper block-layout-builder block-extra-field-blocknodeprojectlinks">
+  
+    
+      
+  </section>
+
+    </div>
+  </div>
+
+  </div>
+
+</article>
+
+  </section>
+
+
+          </div>
+        </div>
+        <!-- End: Main Content -->
+                        <!-- Start: Right SideBar -->
+        <div class="w3-quarter main-box main-region second-sidebar breadcrumb-found" role="complementary" data-once="body">
+          <div class="w3-sidebar-second w3-mobile ">
+            
+
+  
+    
+      <form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8" class="w3-row w3-search-block-form">
+  <div class="w3-section js-form-item form-item js-form-type-search form-type-search js-form-item-keys form-item-keys form-no-label">
+      <label for="edit-keys" class="visually-hidden">Search</label>
+        <input title="Enter the terms you wish to search for." placeholder="Search" data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" size="15" maxlength="128" class="form-search w3-input w3-border w3-theme-border">
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions w3-row element-container-wrapper js-form-wrapper form-wrapper" id="edit-actions"><input class="search-button-block button js-form-submit form-submit w3-button w3-border w3-theme-border w3-margin-top w3-margin-bottom" data-drupal-selector="edit-submit" type="submit" id="edit-submit" value=".">
+</div>
+
+</form>
+
+  
+<section class="views-element-container w3-block w3-block-wrapper block-views block-views-blocknew-publications-new-publications-block" id="block-views-block-new-publications-new-publications-block">
+  
+    
+      <div class="w3-row element-container-wrapper"><div class="w3-row view view-new-publications view-id-new_publications view-display-id-new_publications_block js-view-dom-id-cffad0e97042d0706212ccbb24716fefe00d1dbf427ce24fe227742970e19ad3">
+  
+    
+      <header class="view-header">
+      <h2><a href="https://dbs.uni-leipzig.de/research/publications/">Recent publications</a> <a href="https://dbs.uni-leipzig.de/research/publications/feed"><span class="fa fa-rss"></span></a></h2>
+    </header>
+      
+      <div class="view-content">
+      <div class="item-list">
+  
+  <ul class="item-list w3-ul ul-0" data-once="body">
+
+          <li class="w3-panel li-0" data-once="ul"><div class="views-field views-field-field-publication-year-1"><div class="field-content readon">2024 / 3: <a href="https://dbs.uni-leipzig.de/research/publications/privately-estimating-linkage-quality-for-record-linkage-0" hreflang="en">(Privately) Estimating Linkage Quality for Record Linkage</a></div></div></li>
+          <li class="w3-panel li-0" data-once="ul"><div class="views-field views-field-field-publication-year-1"><div class="field-content readon">2024 / 3: <a href="https://dbs.uni-leipzig.de/research/publications/seraph-continuous-queries-on-property-graph-streams" hreflang="en">Seraph: Continuous Queries on Property Graph Streams</a></div></div></li>
+          <li class="w3-panel li-0" data-once="ul"><div class="views-field views-field-field-publication-year-1"><div class="field-content readon">2024 / 1: <a href="https://dbs.uni-leipzig.de/research/publications/predictive-manufacturing-an-intelligent-monitoring-system-to-detect-anomalies" hreflang="en">Predictive Manufacturing - An Intelligent Monitoring System to Detect Anomalies in 3D Printing</a></div></div></li>
+          <li class="w3-panel li-0" data-once="ul"><div class="views-field views-field-field-publication-year-1"><div class="field-content readon">2024 / 1: <a href="https://dbs.uni-leipzig.de/research/publications/generating-synthetic-health-sensor-data-for-privacy-preserving-wearable" hreflang="en">Generating Synthetic Health Sensor Data for Privacy-Preserving Wearable Stress Detection</a></div></div></li>
+          <li class="w3-panel li-0" data-once="ul"><div class="views-field views-field-field-publication-year-1"><div class="field-content readon">2023 / 11: <a href="https://dbs.uni-leipzig.de/research/publications/studying-linked-data-accessibility-healthiness-for-the-long-tail-of-the-data" hreflang="en">Studying Linked Data Accessibility Healthiness for the Long Tail of the Data Web</a></div></div></li>
+    
+  </ul>
+
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </section>
+
+
+          </div>
+        </div>
+        <!-- End: Right SideBar -->
+              </div>
+      <!-- Endn: Main Container  -->
+    </div>
+  </div>
+  <!-- End: Main -->
+
+  
+  
+    <!-- Start: Footer Menu -->
+  <div id="footer-menu" class="w3-col w3-clear w3-theme-d5 ">
+    <div id="footer-menu-inner" class="w3-row footer-menu-inner none">
+            <!-- Start: Bottom Menu -->
+            <div class="w3-container w3-center w3-mobile">
+        
+<nav role="navigation" aria-labelledby="block-dbs-footer-menu" id="block-dbs-footer">
+            
+  <h2 class="visually-hidden" id="block-dbs-footer-menu">Footer menu</h2>
+  
+
+                          <ul class="ul-parent ul-parent-footer ul-0" role="menu" data-once="body">
+                          <li class="li-item li-item-footer li-0" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/directions" class="w3-button li-link li-link-footer" role="menuitem" data-drupal-link-system-path="node/11740">Directions</a>
+              </li>
+                      <li class="li-item li-item-footer li-0" role="none" data-once="ul">
+        <a href="https://dbs.uni-leipzig.de/contact" class="w3-button li-link li-link-footer" role="menuitem" data-drupal-link-system-path="contact">Contact</a>
+              </li>
+                      <li class="li-item li-item-footer li-0" role="none" data-once="ul">
+        <a href="https://www.mathcs.uni-leipzig.de/impressum" class="w3-button li-link li-link-footer" role="menuitem">Impressum</a>
+              </li>
+        </ul>
+  
+
+  </nav>
+
+
+      </div>
+      <!-- End: Bottom Menu -->
+          </div>
+  </div>
+  <!-- End: Footer Menu -->
+  
+  </div>
+<!-- End: Page Wrapper -->
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/11455","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"dbs\/academicons,dbs\/global-components,dbs\/w3-css-theme-uni-leipzig,drupal8_w3css_theme\/d8w3css-gfex,drupal8_w3css_theme\/d8w3css-gfin,drupal8_w3css_theme\/d8w3css-gfin-open-sans,drupal8_w3css_theme\/d8w3css-global-styling,drupal8_w3css_theme\/font-awesome-4-in,drupal8_w3css_theme\/w3-css,drupal8_w3css_theme\/w3-css-theme-uni-leipzig,layout_discovery\/onecol,statistics\/drupal.statistics,system\/base,views\/views.ajax,views\/views.module","theme":"dbs","theme_token":null},"ajaxTrustedUrl":{"\/search\/node":true,"\/research\/projects\/benchmark-datasets-for-entity-resolution":true},"statistics":{"data":{"nid":"11455"},"url":"\/core\/modules\/statistics\/statistics.php"},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:e09d2cd082ad2e5b79a4d3588f851a024c1f531b0529eda70b1464c2d7f117f5":{"view_name":"publications_by_tags","view_display_id":"publications_by_tags","view_args":"3305, 3297, 3486","view_path":"\/node\/11455","view_base_path":null,"view_dom_id":"e09d2cd082ad2e5b79a4d3588f851a024c1f531b0529eda70b1464c2d7f117f5","pager_element":0}}},"user":{"uid":0,"permissionsHash":"57604444098f6932d0681a1768b7f6b81f0f6aac9cb4831ab1ed7b27a4a77bf3"}}</script>
+<script src="Benchmark%20datasets%20for%20entity%20resolution%20Database%20Group%20Leipzig_files/js_PYEwnovwFSv101vki2Vk4-F7B5W-QfjQsqPnNlQ2i0Q.js"></script>
+
+  
+
+</body></html>
